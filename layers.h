@@ -9,6 +9,10 @@
 #include <stdint.h>
 #include <inttypes.h>
 
+#ifdef _MSC_VER
+#define __attribute__(x)
+#endif // _MSC_VER
+
 #ifndef NULL
 #define NULL ((void*)0)
 #endif

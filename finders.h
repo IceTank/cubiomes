@@ -7,6 +7,10 @@
 #include <stdlib.h>
 #include <math.h>
 
+#ifdef _MSC_VER
+#define __attribute__(x)
+#endif // _MSC_VER
+
 #ifdef _WIN32
 #include <windows.h>
 

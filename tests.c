@@ -160,7 +160,7 @@ int gw = 16, gh = 16;
 int64_t testPerfEnd(int64_t n, void *data)
 {
     EndNoise *en = (EndNoise*) data;
-    int ids[gw*gh];
+    int ids[16 * 16];
     int64_t r = 0;
 
     while (n-->0)
@@ -176,7 +176,7 @@ int64_t testPerfEnd(int64_t n, void *data)
 int64_t testPerfNether(int64_t n, void *data)
 {
     NetherNoise *nn = (NetherNoise*) data;
-    int ids[gw*gh];
+    int ids[16 * 16];
     int64_t r = 0;
 
     while (n-->0)

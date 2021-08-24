@@ -1970,7 +1970,7 @@ int isViableEndCityTerrain(const EndNoise *en, const SurfaceNoise *sn,
     int cellz = (blockZ >> 3);
     // TODO: make sure upper bound is ok
     const int y0 = 15, y1 = 18; // only check range that could yield h >= 60
-    double ncol[3][3][y1-y0+1];
+    double ncol[3][3][18 - 15 +1];
 
     sampleNoiseColumnEnd(ncol[0][0], sn, en, cellx, cellz, y0, y1);
     sampleNoiseColumnEnd(ncol[0][1], sn, en, cellx, cellz+1, y0, y1);

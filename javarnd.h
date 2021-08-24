@@ -3,6 +3,9 @@
 
 #include <stdint.h>
 
+#ifdef _MSC_VER
+#define __attribute__(x)
+#endif // _MSC_VER
 
 /********************** C copy of the Java Random methods **********************
  */
@@ -102,8 +105,7 @@ static inline void skipNextN(uint64_t *seed, uint64_t n)
 /* Find the modular inverse: (1/x) | mod m.
  * Assumes x and m are positive (less than 2^63), co-prime.
  */
-static inline __attribute__((const))
-uint64_t mulInv(uint64_t x, uint64_t m)
+ static __forceinline uint64_t mulInv(uint64_t x, uint64_t m)
 {
     uint64_t t, q, a, b, n;
     if ((int64_t)m <= 1)
